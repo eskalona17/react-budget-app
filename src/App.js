@@ -21,7 +21,7 @@ function App() {
 
       //resta del presupuesto actual
       const presupuestoRestante = restante - gasto.cantidad;
-      guardarRestante(presupuestoRestante)
+      guardarRestante(presupuestoRestante);
 
       //resetear a false
       guardarCrearGasto(false);
