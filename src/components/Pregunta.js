@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Error from './Error'
 
-const Pregunta = () => {
+const Pregunta = ({ guardarPresupuesto, guardarRestante }) => {
   //definir el state
   const [ cantidad, guardarCantidad ] = useState(0);
   const [ error, guardarError ] = useState(false)
@@ -22,6 +22,8 @@ const Pregunta = () => {
 
       //si se pasa la validación
       guardarError(false)
+      guardarPresupuesto(cantidad)
+      guardarRestante(cantidad)
   }
   return (
     <>
