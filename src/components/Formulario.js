@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Error from "./Error";
 import { v4 as uuidv4 } from 'uuid';
 
-const Formulario = ({agregarNuevoGasto}) => {
+const Formulario = ({guardarGasto, guardarCrearGasto}) => {
   //definir el state
   const [nombre, guardarNombre] = useState("");
   const [cantidad, guardarCantidad] = useState(0);
@@ -25,7 +25,8 @@ const Formulario = ({agregarNuevoGasto}) => {
     }
     console.log(gasto)
     //pasar el gasto al component principal
-    agregarNuevoGasto(gasto)
+    guardarGasto(gasto)
+    guardarCrearGasto(true)
 
     //resetear el form
     guardarNombre('')
