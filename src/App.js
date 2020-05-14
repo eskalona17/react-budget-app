@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from "react";
-import Pregunta from './components/Pregunta'
-
+import Pregunta from "./components/Pregunta";
 
 function App() {
-    return(
-      <div className="container">
-        <header>
-          <h1>Gasto semanal</h1>
-          <div className="contenido-principal contenido">
-            <Pregunta />
-          </div>
-        </header>
-      </div>
+  return (
+    <div className="container">
+      <header>
+        <h1>Gasto semanal</h1>
+        <div className="contenido-principal contenido">
+          <Pregunta />
+        </div>
+      </header>
+    </div>
   );
 }
 
